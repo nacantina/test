@@ -1,41 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>API de Musixmatch</title>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-  <h1>Buscador de Canciones</h1>
-  <input type="text" id="searchInput" placeholder="Ingrese el nombre de la canción o artista">
-  <button id="searchButton">Buscar</button>
-  <div id="results"></div>
-
-  <script>
-    $(document).ready(function() {
-  $('#searchButton').click(function() {
-    const apiKey = '91660cabd77014f857a167279ef3de60'; // Reemplaza esto con tu clave de API
-    const searchQuery = $('#searchInput').val();
-
-    fetch(`https://api.musixmatch.com/ws/1.1/track.search?q_artist=${searchQuery}&apikey=${apiKey}`)
-      .then(response => response.json())
-      .then(data => {
-        // Maneja aquí los datos obtenidos de la API y muestra los resultados en el elemento "#results"
-        // Puedes acceder a los datos en "data.message.body.track_list"
-        const trackList = data.message.body.track_list;
-
-        // Ejemplo de cómo mostrar los títulos de las canciones en #results
-        $('#results').empty(); // Limpia los resultados anteriores
-        trackList.forEach(function(track) {
-          $('#results').append(`<p>${track.track.track_name}</p>`);
-        });
-      })
-      .catch(error => {
-        console.error(error);
-      });
-  });
-});
-  </script>
+    <h1>Hola Github</h1>
 </body>
 </html>
